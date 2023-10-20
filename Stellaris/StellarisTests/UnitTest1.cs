@@ -1,6 +1,6 @@
 namespace StellarisTests
 {
-    public class UnitTest1
+    public class TraitWrittingTests
     {
         [Fact]
         public void Test1()
