@@ -12,6 +12,13 @@ namespace Stellaris
 
     public class Trait
     {
+        public TraitType TraitType { get; private set; }
+
+        public Trait(TraitType traitType)
+        {
+            TraitType = traitType;
+        }
+
         public TraitProperty<string> Name { get; set; } = new TraitProperty<string>(false, "New_Trait", true);
         public TraitProperty<int> Cost { get; set; } = new TraitProperty<int>(false, 0, true);
         public TraitProperty<bool> Initial { get; set; } = new TraitProperty<bool>(false, true, true);
@@ -182,6 +189,11 @@ namespace Stellaris
     {
         public string ModifierName { get; set; }
         public double Value { get; set; }
+    }
+
+    public enum TraitType
+    {
+        Species, Leader,
     }
 
 

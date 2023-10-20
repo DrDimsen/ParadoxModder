@@ -8,7 +8,7 @@ namespace StellarisTests
 
         public TraitCreationTests()
         {
-            trait = new Trait();
+            trait = new Trait(TraitType.Species);
         }
 
         [Fact]
@@ -85,7 +85,7 @@ namespace StellarisTests
         [Fact]
         public void AddingOppositeTraitShouldIncreaseCount()
         {
-            trait.Opposites.Value.Add(new Trait());
+            trait.Opposites.Value.Add(new Trait(TraitType.Species));
             Assert.Single(trait.Opposites.Value);
         }
 
