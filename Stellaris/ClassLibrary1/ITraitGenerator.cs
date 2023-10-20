@@ -12,31 +12,30 @@ namespace Stellaris
 
     public class Trait
     {
-        public string Name { get; set; } = "New_Trait";
-        public int Cost { get; set; } = 0;
-        public bool Initial { get; set; } = true;
-        public bool Randomized { get; set; } = true;
-        public bool Modification { get; set; } = true;
-        public bool Improves_Leaders { get; set; } = false; // Implemeted Elsewhere
-        public bool Advanced_Trait { get; set; } = false;
-        public bool Forced_Happiness { get; set; } = false;
-        public bool Valid_For_All_Ethics { get; set; } = true;
-        public bool Immortal_Leaders { get; set; } = false;
-        public double PotentialCrossbreedingChance { get; set; } = 0;
-        public List<Triggered_Pop_Modifier> Triggered_Pop_Modifier { get; set; } = new List<Triggered_Pop_Modifier>();
-        public List<Modifier> Growing_Modifiers { get; set; } = new List<Modifier>();
-        public List<Modifier> Assembling_Modifier { get; set; } = new List<Modifier>();
-        public List<Modifier> Declining_Modifier { get; set; } = new List<Modifier>();
-        public List<Modifier> Modifiers { get; set; } = new List<Modifier>();
-        public List<Modifier> Self_Modifier { get; set; } = new List<Modifier>();
-        public List<Trait> Opposites { get; set; } = new List<Trait>();
-        public double Ai_Weight { get; set; } = 100;
-        public double Leader_Min_Age { get; set; } = 0;
-        public double Leader_Max_Age { get; set; } = 0;
+ public TraitProperty<string> Name { get; set; } = new TraitProperty<string>(false, "New_Trait", true);
+    public TraitProperty<int> Cost { get; set; } = new TraitProperty<int>(false, 0, true);
+    public TraitProperty<bool> Initial { get; set; } = new TraitProperty<bool>(false, true, true);
+    public TraitProperty<bool> Randomized { get; set; } = new TraitProperty<bool>(false, true, true);
+    public TraitProperty<bool> Modification { get; set; } = new TraitProperty<bool>(false, true, true);
+    public TraitProperty<bool> Improves_Leaders { get; set; } = new TraitProperty<bool>(false, false, true); 
+    public TraitProperty<bool> Advanced_Trait { get; set; } = new TraitProperty<bool>(false, false, true);
+    public TraitProperty<bool> Forced_Happiness { get; set; } = new TraitProperty<bool>(false, false, true);
+    public TraitProperty<bool> Valid_For_All_Ethics { get; set; } = new TraitProperty<bool>(false, true, true);
+    public TraitProperty<bool> Immortal_Leaders { get; set; } = new TraitProperty<bool>(false, false, true);
+    public TraitProperty<double> PotentialCrossbreedingChance { get; set; } = new TraitProperty<double>(false, 0, true);
+    public TraitProperty<List<Triggered_Pop_Modifier>> Triggered_Pop_Modifier { get; set; } = new TraitProperty<List<Triggered_Pop_Modifier>>(false, new List<Triggered_Pop_Modifier>(), true);
+    public TraitProperty<List<Modifier>> Growing_Modifiers { get; set; } = new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true);
+    public TraitProperty<List<Modifier>> Assembling_Modifier { get; set; } = new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true);
+    public TraitProperty<List<Modifier>> Declining_Modifier { get; set; } = new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true);
+    public TraitProperty<List<Modifier>> Modifiers { get; set; } = new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true);
+    public TraitProperty<List<Modifier>> Self_Modifier { get; set; } = new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true);
+    public TraitProperty<List<Trait>> Opposites { get; set; } = new TraitProperty<List<Trait>>(false, new List<Trait>(), true);
+    public TraitProperty<double> Ai_Weight { get; set; } = new TraitProperty<double>(false, 100, true);
+    public TraitProperty<double> Leader_Min_Age { get; set; } = new TraitProperty<double>(false, 0, true);
+    public TraitProperty<double> Leader_Max_Age { get; set; } = new TraitProperty<double>(false, 0, true);
+    public TraitProperty<List<ResourceCost>> Slave_Cost { get; set; } = new TraitProperty<List<ResourceCost>>(false, new List<ResourceCost>(), true);
+    public TraitProperty<List<string>> AllowedArchetypes { get; set; } = new TraitProperty<List<string>>(false, new List<string>(), true);
 
-        public List<ResourceCost> Slave_Cost { get; set; } = new List<ResourceCost>();
-
-        public List<string> AllowedArchetypes { get; set; } = new List<string>();
         /*
         public string Icon { get; set; } // Alternative icon of this trait. gfx/interface/icons/traits/<trait key>.dds 
         public bool Allowed_Ethics { get; set; }  
