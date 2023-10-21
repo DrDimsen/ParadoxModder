@@ -21,7 +21,7 @@ public class IDoubleTextWritterTests
     [Fact]
     public void IfValueIsDefaultAndIsntRequiredReturnEmpty()
     {
-        TraitProperty<double> prop  = new TraitProperty<double>(false, 5, true, "initial");
+        TraitProperty<double> prop  = new TraitProperty<double>(false, 5, "initial");
         var result = writter.Write(prop);
         Assert.Empty(result);
     }
@@ -29,7 +29,7 @@ public class IDoubleTextWritterTests
     [Fact]
     public void IfFieldIsRequiredButNotChangedReturnText()
     {
-        TraitProperty<double> prop  = new TraitProperty<double>(true, 5, true, "initial");
+        TraitProperty<double> prop  = new TraitProperty<double>(true, 5, "initial");
         var result = writter.Write(prop);
         Assert.Equal("initial = 5", result);
     }
@@ -37,7 +37,7 @@ public class IDoubleTextWritterTests
     [Fact]
     public void IfFieldIsChangedReturnText()
     {
-        TraitProperty<double> prop  = new TraitProperty<double>(false, 5, true, "initial");
+        TraitProperty<double> prop  = new TraitProperty<double>(false, 5, "initial");
         prop.SetValue(2);
         var result = writter.Write(prop);
         Assert.Equal("initial = 2", result);

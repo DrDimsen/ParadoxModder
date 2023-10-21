@@ -21,7 +21,7 @@ public class IStringTextWritterTests
     [Fact]
     public void IfValueIsDefaultAndIsntRequiredReturnEmpty()
     {
-        TraitProperty<string> prop  = new TraitProperty<string>(false, "5", true, "initial");
+        TraitProperty<string> prop  = new TraitProperty<string>(false, "5", "initial");
         var result = writter.Write(prop);
         Assert.Empty(result);
     }
@@ -29,7 +29,7 @@ public class IStringTextWritterTests
     [Fact]
     public void IfFieldIsRequiredButNotChangedReturnText()
     {
-        TraitProperty<string> prop  = new TraitProperty<string>(true, "hello", true, "initial");
+        TraitProperty<string> prop  = new TraitProperty<string>(true, "hello", "initial");
         var result = writter.Write(prop);
         Assert.Equal("initial = hello", result);
     }
@@ -37,7 +37,7 @@ public class IStringTextWritterTests
     [Fact]
     public void IfFieldIsChangedReturnText()
     {
-        TraitProperty<string> prop  = new TraitProperty<string>(false, "123", true, "initial");
+        TraitProperty<string> prop  = new TraitProperty<string>(false, "123", "initial");
         prop.SetValue("hello");
         var result = writter.Write(prop);
         Assert.Equal("initial = hello", result);

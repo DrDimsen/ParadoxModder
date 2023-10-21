@@ -7,19 +7,17 @@ public class TraitProperty<T>
     public Type PropertyType { get; private set; }
     public bool IsRequired { get; private set; }
     public T Value { get; private set; }
-    public bool CanBeEmpty { get; private set; }
     public List<TraitDependency<T>> Dependencies { get; private set; }
 
     public string StellarisName { get; private set; }
 
     public bool IsChanged { get; private set; }
 
-    public TraitProperty(bool isRequired, T defaultValue, bool canBeEmpty, string stellarisName)
+    public TraitProperty(bool isRequired, T defaultValue, string stellarisName)
     {
         PropertyType = typeof(T);
         IsRequired = isRequired;
         Value = defaultValue;
-        CanBeEmpty = canBeEmpty;
         Dependencies = new List<TraitDependency<T>>();
         IsChanged = false;
         StellarisName = stellarisName;

@@ -7,50 +7,50 @@ public class Trait
 {
     public TraitType TraitType { get; private set; }
     
-    public TraitProperty<string> Name { get; set; } = new TraitProperty<string>(false, "New_Trait", true, "name");
-    public TraitProperty<int> Cost { get; set; } = new TraitProperty<int>(false, 0, true,"cost");
-    public TraitProperty<bool> Initial { get; set; } = new TraitProperty<bool>(false, true, true, "initial");
-    public TraitProperty<bool> Randomized { get; set; } = new TraitProperty<bool>(false, true, true, "randomized");
-    public TraitProperty<bool> Modification { get; set; } = new TraitProperty<bool>(false, true, true,"modification");
-    public TraitProperty<bool> Improves_Leaders { get; set; } = new TraitProperty<bool>(false, false, true,"improves_leaders");
-    public TraitProperty<bool> Advanced_Trait { get; set; } = new TraitProperty<bool>(false, false, true,"advanced_trait");
-    public TraitProperty<bool> Forced_Happiness { get; set; } = new TraitProperty<bool>(false, false, true,"forced_happiness");
-    public TraitProperty<bool> Valid_For_All_Ethics { get; set; } = new TraitProperty<bool>(false, true, true,"valid_for_all_ethics");
-    public TraitProperty<bool> Immortal_Leaders { get; set; } = new TraitProperty<bool>(false, false, true, "immortal_leaders");
+    public TraitProperty<string> Name { get; set; } = new TraitProperty<string>(true, "New_Trait", "name");
+    public TraitProperty<int> Cost { get; set; } = new TraitProperty<int>(false, 0,"cost");
+    public TraitProperty<bool> Initial { get; set; } = new TraitProperty<bool>(false, true, "initial");
+    public TraitProperty<bool> Randomized { get; set; } = new TraitProperty<bool>(false, true, "randomized");
+    public TraitProperty<bool> Modification { get; set; } = new TraitProperty<bool>(false, true,"modification");
+    public TraitProperty<bool> Improves_Leaders { get; set; } = new TraitProperty<bool>(false, false,"improves_leaders");
+    public TraitProperty<bool> Advanced_Trait { get; set; } = new TraitProperty<bool>(false, false,"advanced_trait");
+    public TraitProperty<bool> Forced_Happiness { get; set; } = new TraitProperty<bool>(false, false,"forced_happiness");
+    public TraitProperty<bool> Valid_For_All_Ethics { get; set; } = new TraitProperty<bool>(false, true,"valid_for_all_ethics");
+    public TraitProperty<bool> Immortal_Leaders { get; set; } = new TraitProperty<bool>(false, false, "immortal_leaders");
 
     public TraitProperty<double> PotentialCrossbreedingChance { get; set; } =
-        new TraitProperty<double>(false, 0, true, "potential_crossbreeding_chance");
+        new TraitProperty<double>(false, 0, "potential_crossbreeding_chance");
 
     public TraitProperty<List<Triggered_Pop_Modifier>> Triggered_Pop_Modifier { get; set; } =
-        new TraitProperty<List<Triggered_Pop_Modifier>>(false, new List<Triggered_Pop_Modifier>(), true, "triggered_pop_modifier");
+        new TraitProperty<List<Triggered_Pop_Modifier>>(false, new List<Triggered_Pop_Modifier>(), "triggered_pop_modifier");
 
     public TraitProperty<List<Modifier>> Growing_Modifiers { get; set; } =
-        new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true,"growing_modifier" );
+        new TraitProperty<List<Modifier>>(false, new List<Modifier>(),"growing_modifier" );
 
     public TraitProperty<List<Modifier>> Assembling_Modifier { get; set; } =
-        new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true, "assembling_modifier");
+        new TraitProperty<List<Modifier>>(false, new List<Modifier>(), "assembling_modifier");
 
     public TraitProperty<List<Modifier>> Declining_Modifier { get; set; } =
-        new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true, "declining_modifier");
+        new TraitProperty<List<Modifier>>(false, new List<Modifier>(), "declining_modifier");
 
     public TraitProperty<List<Modifier>> Modifiers { get; set; } =
-        new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true,"modifier" );
+        new TraitProperty<List<Modifier>>(false, new List<Modifier>(),"modifier" );
 
     public TraitProperty<List<Modifier>> Self_Modifier { get; set; } =
-        new TraitProperty<List<Modifier>>(false, new List<Modifier>(), true,"self_modifier");
+        new TraitProperty<List<Modifier>>(false, new List<Modifier>(),"self_modifier");
 
     public TraitProperty<List<Trait>> Opposites { get; set; } =
-        new TraitProperty<List<Trait>>(false, new List<Trait>(), true,"opposites");
+        new TraitProperty<List<Trait>>(false, new List<Trait>(),"opposites");
 
-    public TraitProperty<double> Ai_Weight { get; set; } = new TraitProperty<double>(false, 100, true, "ai_weight");
-    public TraitProperty<double> Leader_Min_Age { get; set; } = new TraitProperty<double>(false, 0, true, "leader_age_min");
-    public TraitProperty<double> Leader_Max_Age { get; set; } = new TraitProperty<double>(false, 0, true,"leader_age_max");
+    public TraitProperty<double> Ai_Weight { get; set; } = new TraitProperty<double>(false, 100, "ai_weight");
+    public TraitProperty<double> Leader_Min_Age { get; set; } = new TraitProperty<double>(false, 0, "leader_age_min");
+    public TraitProperty<double> Leader_Max_Age { get; set; } = new TraitProperty<double>(false, 0,"leader_age_max");
 
     public TraitProperty<List<ResourceCost>> Slave_Cost { get; set; } =
-        new TraitProperty<List<ResourceCost>>(false, new List<ResourceCost>(), true,"slave_cost");
+        new TraitProperty<List<ResourceCost>>(false, new List<ResourceCost>(),"slave_cost");
 
     public TraitProperty<List<string>> AllowedArchetypes { get; set; } =
-        new TraitProperty<List<string>>(false, new List<string>(), true,"allowed_archetypes");
+        new TraitProperty<List<string>>(false, new List<string>(),"allowed_archetypes");
 
     public Trait(TraitType traitType)
     {

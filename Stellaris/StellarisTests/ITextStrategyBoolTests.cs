@@ -20,7 +20,7 @@ public class ITextStrategyBoolTests
     [Fact]
     public void IfValueIsDefaultAndIsntRequiredReturnEmpty()
     {
-        TraitProperty<bool> prop  = new TraitProperty<bool>(false, true, true, "initial");
+        TraitProperty<bool> prop  = new TraitProperty<bool>(false, true, "initial");
         var result = writter.Write(prop);
         Assert.Empty(result);
     }
@@ -28,7 +28,7 @@ public class ITextStrategyBoolTests
     [Fact]
     public void IfFieldIsRequiredButNotChangedReturnText()
     {
-        TraitProperty<bool> prop  = new TraitProperty<bool>(true, true, true, "initial");
+        TraitProperty<bool> prop  = new TraitProperty<bool>(true, true, "initial");
         var result = writter.Write(prop);
         Assert.Equal("initial = yes", result);
     }
@@ -36,7 +36,7 @@ public class ITextStrategyBoolTests
     [Fact]
     public void IfFieldIsChangedReturnText()
     {
-        TraitProperty<bool> prop  = new TraitProperty<bool>(false, true, true, "initial");
+        TraitProperty<bool> prop  = new TraitProperty<bool>(false, true, "initial");
         prop.SetValue(false);
         var result = writter.Write(prop);
         Assert.Equal("initial = no", result);
