@@ -1,0 +1,36 @@
+﻿namespace Stellaris;
+
+public enum ModifierType
+{
+    Agendas,
+    Ascension,
+    Building,
+    ColonyTypes,
+    Component,
+    Deposits,
+    Districts,
+    Edicts,
+    EspionageAssets,
+    Ethics,
+    FederationLaws,
+    Authorities,
+    CivicsAndOrigins,
+    Megastructures,
+    MenacePerks,
+    PlanetClass,
+    PolicyOption,
+    PopCategories,
+    PopJobs,
+    Relics,
+    GalacticCommunityResolution,
+    ShipSizes,
+    SpeciesRights,
+    StarClasses,
+    StarbaseBuildings,
+    StarbaseModules,
+    StaticModifiers,
+    Technology,
+    Traditions,
+    SpeciesTraits,
+    LeaderTraits
+}

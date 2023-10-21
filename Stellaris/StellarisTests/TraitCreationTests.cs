@@ -257,5 +257,53 @@ namespace StellarisTests
             trait.AllowedArchetypes.Value.Add("Archetype_X");
             Assert.Single(trait.AllowedArchetypes.Value);
         }
+        
+        [Fact]
+        public void AddingLeaderModifierToLeaderTraitShouldSucceed()
+        {
+            var leaderTrait = new Trait(TraitType.Leader);
+            var leaderModifier = new Modifier { Type = ModifierType.LeaderTraits };
+
+            bool result = leaderTrait.AddModifierToProperty(leaderModifier, leaderTrait.Modifiers);
+
+            Assert.True(result);
+            Assert.Single(leaderTrait.Modifiers.Value);
+        }
+
+        [Fact]
+        public void AddingSpeciesModifierToSpeciesTraitShouldSucceed()
+        {
+            var speciesTrait = new Trait(TraitType.Species);
+            var speciesModifier = new Modifier { Type = ModifierType.SpeciesTraits };
+
+            bool result = speciesTrait.AddModifierToProperty(speciesModifier, speciesTrait.Modifiers);
+
+            Assert.True(result);
+            Assert.Single(speciesTrait.Modifiers.Value);
+        }
+
+        [Fact]
+        public void AddingLeaderModifierToSpeciesTraitShouldFail()
+        {
+            var speciesTrait = new Trait(TraitType.Species);
+            var leaderModifier = new Modifier { Type = ModifierType.LeaderTraits };
+
+            bool result = speciesTrait.AddModifierToProperty(leaderModifier, speciesTrait.Modifiers);
+
+            Assert.False(result);
+            Assert.Empty(speciesTrait.Modifiers.Value);
+        }
+
+        [Fact]
+        public void AddingSpeciesModifierToLeaderTraitShouldFail()
+        {
+            var leaderTrait = new Trait(TraitType.Leader);
+            var speciesModifier = new Modifier { Type = ModifierType.SpeciesTraits };
+
+            bool result = leaderTrait.AddModifierToProperty(speciesModifier, leaderTrait.Modifiers);
+
+            Assert.False(result);
+            Assert.Empty(leaderTrait.Modifiers.Value);
+        }
     }
 }
