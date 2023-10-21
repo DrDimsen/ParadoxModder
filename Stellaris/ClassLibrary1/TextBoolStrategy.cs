@@ -3,11 +3,6 @@ using Stellaris.Traits;
 
 namespace Stellaris;
 
-public interface ITextStrategy<T>
-{
-    string Write(TraitProperty<T> property);
-}
-
 public class TextBoolStrategy : ITextStrategy<bool>
 {
     public string Write(TraitProperty<bool> property)
