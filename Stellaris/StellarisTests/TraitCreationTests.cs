@@ -244,7 +244,7 @@ namespace StellarisTests
         [Fact]
         public void AddingSlaveCostShouldIncreaseCount()
         {
-            trait.Slave_Cost.Value.Add(new ResourceCost());
+            trait.Slave_Cost.Value.Add(new ResourceCost(ResourceTypes.Energy,50));
             Assert.Single(trait.Slave_Cost.Value);
         }
 

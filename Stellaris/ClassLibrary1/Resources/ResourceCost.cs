@@ -2,6 +2,12 @@
 
 public class ResourceCost
 {
-    public ResourceTypes Type { get; set; } = ResourceTypes.Energy;
-    public double Value { get; set; } = 0;
+    public ResourceCost(ResourceTypes type, double value)
+    {
+        Type = type;
+        Value = value;
+    }
+
+    public ResourceTypes Type { get; set; }
+    public double Value { get; set; }
 }
