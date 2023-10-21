@@ -1,4 +1,7 @@
-﻿namespace Stellaris;
+﻿using Stellaris.Modifiers;
+using Stellaris.Resources;
+
+namespace Stellaris.Traits;
 
 public class Trait
 {

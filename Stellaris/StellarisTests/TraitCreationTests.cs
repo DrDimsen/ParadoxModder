@@ -1,4 +1,7 @@
 using Stellaris;
+using Stellaris.Modifiers;
+using Stellaris.Resources;
+using Stellaris.Traits;
 
 namespace StellarisTests
 {

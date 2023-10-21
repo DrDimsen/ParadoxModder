@@ -1,4 +1,4 @@
-﻿namespace Stellaris;
+﻿namespace Stellaris.Modifiers;
 
 public class Modifier
 {

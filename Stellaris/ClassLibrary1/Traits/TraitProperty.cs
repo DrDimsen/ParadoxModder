@@ -1,4 +1,4 @@
-﻿namespace Stellaris;
+﻿namespace Stellaris.Traits;
 
 public class TraitProperty<T>
 {

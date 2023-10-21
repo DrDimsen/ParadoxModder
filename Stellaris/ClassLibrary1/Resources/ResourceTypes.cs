@@ -1,4 +1,4 @@
-﻿namespace Stellaris;
+﻿namespace Stellaris.Resources;
 
 public enum ResourceTypes
 {
