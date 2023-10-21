@@ -23,7 +23,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingTraitNameShouldReflectNewValue()
         {
-            trait.Name.Value = "Dragon";
+            trait.Name.SetValue("Dragon");
             Assert.Equal("Dragon", trait.Name.Value);
         }
 
@@ -36,7 +36,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingTraitCostShouldReflectNewValue()
         {
-            trait.Cost.Value = 20;
+            trait.Cost.SetValue(20);
             Assert.Equal(20, trait.Cost.Value);
         }
 
@@ -49,7 +49,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingRandomizedShouldReflectNewValue()
         {
-            trait.Randomized.Value = false;
+            trait.Randomized.SetValue(false);
             Assert.False(trait.Randomized.Value);
         }
 
@@ -62,7 +62,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingValidForAllEthicsShouldReflectNewValue()
         {
-            trait.Valid_For_All_Ethics.Value = false;
+            trait.Valid_For_All_Ethics.SetValue(false);
             Assert.False(trait.Valid_For_All_Ethics.Value);
         }
 
@@ -101,7 +101,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingInitialShouldReflectNewValue()
         {
-            trait.Initial.Value = false;
+            trait.Initial.SetValue(false);
             Assert.False(trait.Initial.Value);
         }
 
@@ -114,7 +114,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingModificationShouldReflectNewValue()
         {
-            trait.Modification.Value = false;
+            trait.Modification.SetValue(false);
             Assert.False(trait.Modification.Value);
         }
 
@@ -127,7 +127,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingImprovesLeadersShouldReflectNewValue()
         {
-            trait.Improves_Leaders.Value = true;
+            trait.Improves_Leaders.SetValue(true);
             Assert.True(trait.Improves_Leaders.Value);
         }
 
@@ -140,7 +140,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingAdvancedTraitShouldReflectNewValue()
         {
-            trait.Advanced_Trait.Value = true;
+            trait.Advanced_Trait.SetValue(true);
             Assert.True(trait.Advanced_Trait.Value);
         }
 
@@ -153,7 +153,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingForcedHappinessShouldReflectNewValue()
         {
-            trait.Forced_Happiness.Value = true;
+            trait.Forced_Happiness.SetValue(true);
             Assert.True(trait.Forced_Happiness.Value);
         }
 
@@ -166,7 +166,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingImmortalLeadersShouldReflectNewValue()
         {
-            trait.Immortal_Leaders.Value = true;
+            trait.Immortal_Leaders.SetValue(true);
             Assert.True(trait.Immortal_Leaders.Value);
         }
 
@@ -179,7 +179,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingPotentialCrossbreedingChanceShouldReflectNewValue()
         {
-            trait.PotentialCrossbreedingChance.Value = 0.5;
+            trait.PotentialCrossbreedingChance.SetValue(0.5);
             Assert.Equal(0.5, trait.PotentialCrossbreedingChance.Value);
         }
 
@@ -205,7 +205,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingAiWeightShouldReflectNewValue()
         {
-            trait.Ai_Weight.Value = 80;
+            trait.Ai_Weight.SetValue(80);
             Assert.Equal(80, trait.Ai_Weight.Value);
         }
 
@@ -218,7 +218,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingLeaderMinAgeShouldReflectNewValue()
         {
-            trait.Leader_Min_Age.Value = 30;
+            trait.Leader_Min_Age.SetValue(30);
             Assert.Equal(30, trait.Leader_Min_Age.Value);
         }
 
@@ -231,7 +231,7 @@ namespace StellarisTests
         [Fact]
         public void ChangingLeaderMaxAgeShouldReflectNewValue()
         {
-            trait.Leader_Max_Age.Value = 80;
+            trait.Leader_Max_Age.SetValue(80);
             Assert.Equal(80, trait.Leader_Max_Age.Value);
         }
 
